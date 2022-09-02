@@ -24,7 +24,7 @@ import (
 	"time"
 
 	"db-orm/database"
-  "db-orm/models"
+  	"db-orm/models"
 )
 
 const webPort = "8070"
@@ -34,7 +34,7 @@ type Config struct {
 }
 
 func main() {
-  app := new(Config)
+  	app := new(Config)
 
 	db, err := connectToDB()
 	if err != nil {
@@ -43,13 +43,13 @@ func main() {
 
 	app.db = db
   
-  // 创建user表
-  db.Migrator().CreateTable(&models.User{})
+  	// 创建user表
+  	db.Migrator().CreateTable(&models.User{})
   
 	// 脚手架db赋值
 	database.SetDB(db)
   
-  app.models = models.NewModels(db)
+  	app.models = models.NewModels(db)
 
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%s", webPort),
