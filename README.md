@@ -1,6 +1,7 @@
 # dborm
 基于gorm的db脚手架，独立出来，可以适用到不同的项目或者服务中
-目录机构会如下:
+# 目录结构会如下:
+```
 db-orm
  |--models
       |--user.go
@@ -10,7 +11,7 @@ db-orm
  main.go
  go.mod
  ...
- 
+```
 # Installing
 $> go get github.com/Jacksmall/db-orm
 # Example
