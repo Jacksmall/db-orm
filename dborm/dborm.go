@@ -24,7 +24,7 @@ type Common struct {
 	db *gorm.DB
 }
 
-func M(t table, tx ...*gorm.DB) Common {
+func New(t table, tx ...*gorm.DB) Common {
 	_db := db
 	if len(tx) > 0 {
 		_db = tx[0]
