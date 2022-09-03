@@ -1,4 +1,4 @@
-module github.com/Jacksmall/dborm
+module github.com/Jacksmall/db-orm
 
 go 1.19
 
